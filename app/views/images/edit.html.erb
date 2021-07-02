@@ -19,9 +19,6 @@
 					<%= f.text_field :description, class: "input", required: true %>
 				</div>
 				<div class="group">
-					<%= f.text_field :file_type, class: "input", required: true %>
-				</div>
-				<div class="group">
 					<%= f.select :category, [["People", "people"], ["Tech", "tech"],["Entertainment", "entertainment"]], { label: "Choose a category:" }, { class: "selectpicker" } %>
 
 				</div>
@@ -30,7 +27,7 @@
 				  <%= f.radio_button :sale, 1, label: "Yes, Item for Sale" %>
 			    </div>
 				<div class="group">
-					<%= f.number_field :price, class: "input", required: true %>
+					<%= f.number_field :price, class: "input"%>
 				</div>
 				<div class="group">
 					<%= f.submit 'Submit' , :class => "button" %>
