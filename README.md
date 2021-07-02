@@ -19,8 +19,8 @@ A demo project for creating an image_directory(listing) and otp authentication u
 * Otp_Image_Attachment - https://drive.google.com/file/d/1y4yGE_LdTrjWhGFPz7lQUZLXszNV6wRn/view
 
 # To Run the project locally
-git clone https://github.com/Nitesh-Kashyap/image-directory.git 
-cd image-directory
-bundle
-rails s 
-check http://localhost:3000/
+* git clone https://github.com/Nitesh-Kashyap/image-directory.git 
+* cd image-directory
+* bundle
+* rails s 
+* check http://localhost:3000/
