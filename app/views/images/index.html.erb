@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Listing</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"><img src="https://img.icons8.com/wired/24/000000/numbered-list.png"></th>
+        <th scope="col">Title</th>
+        <th scope="col">category</th>
+        <th scope="col">Image Preview</th>
+        <th scope="col">Paid / Free</th>
+        <th scope="col" colspan="2">Control Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @images.present? %>
+      <% @images.each_with_index do |image,index| %>
+      <tr>
+        <th scope="row"><%=index+1%></th>
+        <td><%= image.title if image.title%></td>
+        <td><%= image.category if image.category %></td>
+        <td><%= image_tag(image.avatar.thumb.url, alt: 'Image') if image.avatar? %></td>
+        <td><%= image.sale if image.sale %></td>
+        <td><%= link_to 'Edit', edit_image_path(image) %></td>
+        <td><%= link_to 'Delete', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <%end%>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

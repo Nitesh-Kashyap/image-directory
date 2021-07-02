@@ -1,0 +1,45 @@
+<div class="login-wrap">
+	<div class="login-html">
+		<h1>Add New Image</h1>
+		<div class="login-form">
+			<%= bootstrap_form_for @image, :as => :image, :url => images_path , html: { multipart: true } do |f| %>
+			<div class="sign-in-htm">
+				<% @image.errors.full_messages_for(:body).each do |message| %>
+				<div><%= message %></div>
+				<% end %>
+				<div class="group">
+					<%= f.file_field :avatar, class: "form-control", required: true %>
+				</div>
+				
+				<div class="group">
+					<%= f.text_field :title, class: "input", required: true %>
+				</div>
+				<div class="group">
+					<%= f.text_field :description, class: "input", required: true %>
+				</div>
+				<div class="group">
+					<%= f.text_field :file_type, class: "input", required: true %>
+				</div>
+				<div class="group">
+					<%= f.select :category, [["People", "people"], ["Tech", "tech"],["Entertainment", "entertainment"]], { label: "Choose a category:" }, { class: "selectpicker" } %>
+
+				</div>
+				<div class="group">
+				  <%= f.radio_button :sale, 0, label: "No, it’s free" %>
+				  <%= f.radio_button :sale, 1, label: "Yes, Item for Sale" %>
+			    </div>
+				<div class="group">
+					<%= f.number_field :price, class: "input", required: true %>
+				</div>
+				<div class="group">
+					<%= f.check_box :tnc, class: "form-check", required: true %>
+				</div>
+				<div class="group">
+					<%= f.submit 'Submit' , :class => "button" %>
+				</div>
+				<div class="hr"></div>
+			</div>
+			<%end%>	
+		</div>
+	</div>
+</div>

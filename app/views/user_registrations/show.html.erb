@@ -1,0 +1,18 @@
+<div class="login-wrap">
+	<div class="login-html">
+		<h1>OTP Verification</h1>
+		<div class="login-form">
+			<%= bootstrap_form_for @user, :as => :user, :url => verify_otp_user_registration_path(@user) do |f| %>
+			<div class="sign-in-htm">
+				<div class="group">
+					<%= f.text_field :otp, class: "input", required: true %>
+				</div>
+				<div class="group">
+					<%= f.submit 'Submit' , :class => "button" %>
+				</div>
+				<div class="hr"></div>
+			</div>
+			<%end%>	
+		</div>
+	</div>
+</div>
