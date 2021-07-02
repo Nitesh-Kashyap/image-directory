@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A demo project for creating an image_directory(listing) and otp authentication using 2factor. 
 
-Things you may want to cover:
+* Ruby version - 2.7.0
 
-* Ruby version
+* System dependencies - Install imagemagick on ubuntu.
 
-* System dependencies
+* Configuration - rails -v 6.0.3
 
-* Configuration
+* Database creation - sqLite3(default rails db)
 
-* Database creation
+* Services - 2factor(sending/verifying otp)
 
-* Database initialization
+* Run rails Server - rails s
 
-* How to run the test suite
+* A demo link attached - https://drive.google.com/file/d/1khlnPn15v4HE203SgL4mXKGlgS-Vlg-c/view
 
-* Services (job queues, cache servers, search engines, etc.)
+* Otp_Image_Attachment - https://drive.google.com/file/d/1y4yGE_LdTrjWhGFPz7lQUZLXszNV6wRn/view
 
-* Deployment instructions
-
-* ...
+# To Run the project locally
+git clone https://github.com/Nitesh-Kashyap/image-directory.git 
+cd image-directory
+bundle
+rails s 
+check http://localhost:3000/
